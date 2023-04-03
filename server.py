@@ -253,7 +253,7 @@ def customer_nocontact():
 
 @app.route('/bestsell_racquet', methods=['POST'])
 def bestsell_racquet():
- cursor = g.conn.execute("SELECT r.racquet_code, r.name, sum(oi.quantity) FROM order_items oi JOIN racquet r ON oi.item_code = r.racquet_code GROUP BY r.racquet_code, r.name ORDER BY SUM(oi.quantity) DESC LIMIT 3")
+ cursor = g.conn.execute(text("SELECT r.racquet_code, r.name, sum(oi.quantity) FROM order_items oi JOIN racquet r ON oi.item_code = r.racquet_code GROUP BY r.racquet_code, r.name ORDER BY SUM(oi.quantity) DESC LIMIT 3"))
  g.conn.begin().commit()
  record = cursor.fetchall()
  context = dict(data = record)
