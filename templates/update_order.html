@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update order</title>
+  </head>
+  <body>
+    <h1>Update order</h1>
+
+    <h1>Below are the results</h1>
+    <div>{{data}}</div>
+
+  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div>
+  
+    <form method="POST" action="/Update_order">
+      
+      <label for="Order_id">Order_id:</label>
+      <input type="text" id="Order_id" name="Order_id" required>
+
+      <label for="Order_date">Order_date:</label>
+      <input type="text" id="Order_date" name="Order_date" required>
+      
+      <label for="Cust_id">Cust_id:</label>
+      <input type="text" id="Cust_id" name="Cust_id" required>
+
+      <label for="Employee_id">Employee_id:</label>
+      <input type="text" id="Employee_id" name="Employee_id" required>
+
+      <input type="submit" value="Update">
+    </form>
+  </body>
+</html>

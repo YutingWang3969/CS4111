@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update string</title>
+  </head>
+  <body>
+    <h1>Update string</h1>
+
+    <h1>Below are the results</h1>
+    <div>{{data}}</div>
+
+  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div>
+  
+    <form method="POST" action="/Update_string">
+      
+      <label for="string_code">string code:</label>
+      <input type="text" id="string_code" name="string_code" required>
+
+      <label for="color">color:</label>
+      <input type="text" id="color" name="color" required>
+      
+      <label for="gauge">gauge:</label>
+      <input type="text" id="gauge" name="gauge" required>
+
+      <label for="length">length:</label>
+      <input type="text" id="length" name="length" required>
+
+      <label for="core">core:</label>
+      <input type="text" id="core" name="core" required>
+
+      <label for="outside">outside:</label>
+      <input type="text" id="outside" name="outside" required>
+
+      <label for="coating">coating:</label>
+      <input type="text" id="coating" name="coating" required>
+
+      <label for="unit_price">unit_price:</label>
+      <input type="text" id="unit_price" name="unit_price" required>
+
+      <input type="submit" value="update">
+    </form>
+  </body>
+</html>

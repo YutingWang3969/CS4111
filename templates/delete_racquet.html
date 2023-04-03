@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delete Racquet</title>
+  </head>
+    <body>
+      <h1>Below is the data</h1>
+      <div>{{data}}</div>
+    
+      <div>
+        {% for n in data %}
+        <div>{{n}}</div>
+        {% endfor %}
+      </div>
+    <form method="POST" action="/Delete_racquet">
+      <label for="racquet_code">racquet_code:</label>
+      <input type="text" name="racquet_code">
+      <input type="submit" value="Delete">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delete order</title>
+  </head>
+    <body>
+      <h1>Below is the data</h1>
+      <div>{{data}}</div>
+    
+      <div>
+        {% for n in data %}
+        <div>{{n}}</div>
+        {% endfor %}
+      </div>
+    <form method="POST" action="/Delete_order">
+      <label for="Order_id">Order_id:</label>
+      <input type="text" name="Order_id">
+      <input type="submit" value="Delete">
+    </form>
+  </body>
+</html>

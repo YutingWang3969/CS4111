@@ -1,0 +1,49 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Below is the recommendation</h1>
+  <div>{{data}}</div>
+
+  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div>
+
+
+<form method="POST" action="/athlete_search">
+<p>
+	Athlete's name that you are interested in: <input type="text" name="athlete_name"> <input type="submit" value="Search">
+</p>
+</form>
+
+<form method="POST" action="/racquet_search">
+<p>
+  Racquet code that you are interested in: <input type="text" name="racquet_code"> <input type="submit" value="Search">
+</p>
+</form>
+
+<form method="POST" action="/racquet_budget">
+<p>
+  Put in your budget for racquets: <input type="text" name="racquet_budget"> <input type="submit" value="Search">
+</p>
+</form>
+
+<form method="POST" action="/string_budget">
+<p>
+  Put in your budget for strings: <input type="text" name="string_budget"> <input type="submit" value="Search">
+</p>
+</form>
+
+</body>
+
+
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update racquet</title>
+  </head>
+  <body>
+    <h1>Update racquet</h1>
+
+    <h1>Below are the results</h1>
+    <div>{{data}}</div>
+
+  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div>
+  
+    <form method="POST" action="/Update_racquet">
+      
+      <label for="racquet_code">Racquet Code:</label>
+      <input type="text" id="racquet_code" name="racquet_code" required>
+
+      <label for="name">name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="flex">flex:</label>
+      <input type="text" id="flex" name="flex" required>
+
+      <label for="color">color:</label>
+      <input type="text" id="color" name="color" required>
+
+      <label for="unit_price">unit_price:</label>
+      <input type="text" id="unit_price" name="unit_price" required>
+
+      <input type="submit" value="update">
+    </form>
+  </body>
+</html>
